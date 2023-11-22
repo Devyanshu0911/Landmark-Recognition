@@ -1,7 +1,7 @@
 # Landmark Detection App
 
 This Streamlit app utilizes a pre-trained TensorFlow Hub model for detecting landmarks in Asia. The model is trained on the Google-Landmarks-v1 dataset.
-You can find our deployment [here](https://landmark-recognition.streamlit.app/)
+You can find our deployment [here](https://asia-landmark-recognition.streamlit.app/)
 
 ## TensorFlow Hub Model
 

@@ -25,7 +25,7 @@ Feel free to customize the folder structure based on your project's needs.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Devyanshu0911/Landmark-Recognition/tree/main
+   git clone https://github.com/Devyanshu0911/Landmark-Recognition.git
 
 2. **Navigate to  the Project Directory**
 

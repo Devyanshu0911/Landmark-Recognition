@@ -45,6 +45,8 @@ def run():
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
         prediction,image = image_processing(save_image_path)
+        style = "<h6 style='text-align:center; color: white;'>Your Uploaded image is:</h6>"
+        st.markdown(style, unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
             st.write("")

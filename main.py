@@ -32,17 +32,26 @@ def get_map(loc):
     return location.address,location.latitude, location.longitude
 
 def run():
-    st.title("Landmark Recognition")
+    style = "<h1 style='text-align:center; color: grey;'>Landmark Recognition</h1>"
+    st.markdown(style, unsafe_allow_html=True)
     img = PIL.Image.open('logo.png')
     img = img.resize((720,196))
     st.image(img)
-    img_file = st.file_uploader("Choose your Image", type=['png', 'jpg'])
+    style = "<h6 style='text-align:center; color: white;'>Choose image of any landmark of Asia</h6>"
+    st.markdown(style, unsafe_allow_html=True)
+    img_file = st.file_uploader("", type=['png', 'jpg'], label_visibility='collapsed')
     if img_file is not None:
         save_image_path = './Uploads/' + img_file.name
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
         prediction,image = image_processing(save_image_path)
-        st.image(image)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.write("")
+        with col2:
+            st.image(image)
+        with col3:
+            st.write("")
         st.header("📍 **Predicted Landmark is: " + prediction + '**')
         try:
             address, latitude, longitude = get_map(prediction)

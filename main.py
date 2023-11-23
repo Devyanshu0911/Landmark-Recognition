@@ -32,12 +32,12 @@ def get_map(loc):
     return location.address,location.latitude, location.longitude
 
 def run():
-    style = "<h1 style='text-align:center; color: grey;'>Landmark Recognition</h1>"
+    style = "<h1 style='text-align:center; color: green;'>Landmark Recognition</h1>"
     st.markdown(style, unsafe_allow_html=True)
     img = PIL.Image.open('logo.png')
     img = img.resize((720,196))
     st.image(img)
-    style = "<h6 style='text-align:center; color: white;'>Choose image of any landmark of Asia</h6>"
+    style = "<h6 style='text-align:center; color: grey;'>Choose image of any landmark of Asia</h6>"
     st.markdown(style, unsafe_allow_html=True)
     img_file = st.file_uploader("", type=['png', 'jpg'], label_visibility='collapsed')
     if img_file is not None:
@@ -45,7 +45,7 @@ def run():
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
         prediction,image = image_processing(save_image_path)
-        style = "<h6 style='text-align:center; color: white;'>Your Uploaded image is:</h6>"
+        style = "<h6 style='text-align:center; color: grey;'>Your Uploaded image is:</h6>"
         st.markdown(style, unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:

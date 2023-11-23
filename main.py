@@ -34,7 +34,7 @@ def get_map(loc):
 def run():
     st.title("Landmark Recognition")
     img = PIL.Image.open('logo.png')
-    img = img.resize(720,196.27)
+    img = img.resize((720,196))
     st.image(img)
     img_file = st.file_uploader("Choose your Image", type=['png', 'jpg'])
     if img_file is not None:

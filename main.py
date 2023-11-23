@@ -32,7 +32,7 @@ def get_map(loc):
     return location.address,location.latitude, location.longitude
 
 def run():
-    style = "<h1 style='text-align:center; color: green;'>Landmark Recognition</h1>"
+    style = "<h1 style='text-align:center; color: darkgoldenrod;'>Landmark Recognition</h1>"
     st.markdown(style, unsafe_allow_html=True)
     img = PIL.Image.open('logo.png')
     img = img.resize((720,196))
